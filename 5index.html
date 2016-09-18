@@ -9,9 +9,10 @@
 		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		 <meta name="viewport" content="width = device-width,initial-scale=1">
 		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 		</head>	
+
 		<body>
 		<style type="text/css">
 			._nav a {
@@ -30,13 +31,6 @@
 		<form method="get" action="/search" id="search">
 		  <input name="q" type="text" size="40" autocomplete="off" autocapitalize = "off" autocorrect="off" spellcheck="false"  placeholder="إبحث..." />
 		</form>
-
-
-		<style type="text/css">
-
-			
-
-		</style>
 		</header>
 
 		<!-- TODO: you need an aside Menu bar to the right of the website with arrow clicked links inside it a little menu of little sections -->
@@ -220,7 +214,6 @@ a {
 		   
 }
 
-
 #wrap :hover
 {
 	background-color: #398DF0;
@@ -235,14 +228,22 @@ a {
     background-size: 10rem 12rem;
 }
 
-
+.fa
+{
+	float: right;
+}
 
 
 </style>
 
 
 					<div id="wrap" dir="rtl">
-					    <a class="list_item" href="#thisIsPageA">الرياضيات</a>
+					    <a class="list_item" href="#thisIsPageA">
+
+					    <i class="fa fa-arrow-left"> </i>
+					    الرياضيات
+					    </a>
+
 					    <a class="list_item" href="#thisIsPageb">b</a>
 					    <a class="list_item" href="#thisIsPageC">c</a>
 					    <a class="list_item" href="#thisIspageD">d</a>
