@@ -1,22 +1,19 @@
 		<!DOCTYPE html>
 		<html  dir="rtl" lang="ar" >
+
 		<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style2.css" type="text/css" media="screen, projection">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		
 		<script type="text/javascript" src="list.js"></script>
-
-		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		 <meta name="viewport" content="width = device-width,initial-scale=1">
-		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 		</head>	
 
 		<body>
 		<style type="text/css">
 			._nav a {
-				padding-top: 10px;
+				padding-top: 5px;
 				}
 		</style>	
 		<header class="_header">
@@ -28,8 +25,36 @@
 		  <a href="#" class="_nav-link _nav-current">News</a>
 		  <a href="#" class="_nav-link _nav-current">Tips</a>
 		</nav>
+		<style>
+	input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    height: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('Icons/searchicon.png');
+    background-position: 1px 0.5px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	}
+	.q
+	{
+		padding-right: 100px;
+	}
+
+
+input[type=text]:focus {
+    width: 20%;
+    border: 1px solid #398DF0;
+}
+
+</style>
 		<form method="get" action="/search" id="search">
-		  <input name="q" type="text" size="40" autocomplete="off" autocapitalize = "off" autocorrect="off" spellcheck="false"  placeholder="إبحث..." />
+		  <input class="q" type="text" name="search" placeholder="إبحث.." autocomplete="off" autocapitalize = "off" autocorrect="off" spellcheck="false" >
 		</form>
 		</header>
 
@@ -38,7 +63,7 @@
 			._sidebar{
 		    position: absolute;
 		    z-index: 2;
-		    top: 4.8rem;
+		    top: 2.96rem;
 		    bottom: 0;
 		    right: 0;
 		    margin-top: 1px;
@@ -55,6 +80,7 @@
 		section {
 		    outline: 0;
 		    width: 300px;
+		    height: 563px;
 		    outline-color: initial;
 		    outline-style: initial;
 		    outline-width: 0px;
@@ -62,97 +88,19 @@
 		    border-left-color: #E3E3E3;
 		    border-right-color:#f9f9f9; 
 		    border-width: 1px;
-		}
+		    border-bottom-color: #f9f9f9;
+			}
 		/***********************************************************/
 		._sidebar > ._list {
     min-height: 100%;
     padding-bottom: 3.5rem;
 		}
-		._search, ._list, ._sidebar-footer {
-    width: 18rem;
-}
-._list {
-    box-shadow: -1px 0 #e3e3e3 inset;
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-    width: 18rem;
-}
-input, button, ._app, ._search, ._notif, ._list, ._list-hover.clone, ._sidebar-footer-link, ._container, ._content, ._fail, ._coffeescript > .code > pre, ._socketio .ezcol-one-half {
-    box-sizing: border-box;
-}
-._list-item:before {
-    float: left;
-    margin: 0.25rem 0.625rem 0 0;
-}
-._icon-css:before {
-    background-position: -1rem -1rem;
-}
-._list-item:before, ._docs-name:before, ._path-item:first-child:before {
-    background-image: url("//cdn.devdocs.io/assets/docs-42118582a610a069e30c7799712c5ea907c9daf9e1ce5ae7607416598d7eb964.png");
-    background-size: 10rem 12rem;
-    content: "";
-    display: block;
-    height: 1rem;
-    width: 1rem;
-}
 
-._list-dir:not(._list-rdir), ._list-disabled {
-    padding-left: 2.25rem;
-}
-._list-item, ._list-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-}
-._list-item, ._list-item:hover {
-    color: inherit;
-    text-decoration: none;
-}
-._list-item {
-    background: none repeat scroll 0 0 #f9f9f9;
-    box-shadow: -1px 0 #e3e3e3 inset;
-    cursor: default;
-    display: block;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    padding: 0.25rem 0.75rem;
-    position: relative;
-}
-a {
+a.wrap{
     color: #3377c0;
     text-decoration: none;
-}
-._list-arrow:before {
-    background-position: 0 0;
-}
-._list-link:after, ._page a[href^="http:"]:after, ._page a[href^="https:"]:after, ._search:before, ._search-clear:before, ._notif-close:before, ._list-arrow:before, ._sidebar-footer-link:before, ._pre-clip:before, ._path-item + ._path-item:after, ._mobile-btn:before {
-    background-image: url("//cdn.devdocs.io/assets/icons-fcb32b5ce6fb6ec8c8a77052b3172a08e32b3a7c500dae979f07d6019c50d661.png");
-    background-size: 4rem 6rem;
-    content: "";
-    display: block;
-    height: 1rem;
-    width: 1rem;
-}
-._list-arrow {
-    cursor: pointer;
-    left: 0.25rem;
-    opacity: 0.4;
-    padding: 0.5rem;
-    position: absolute;
-    top: 0;
-}
-._list-text {
-    display: block;
-    pointer-events: none;
-}
-._list-item, ._list-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-}
+		}
+
 *::-moz-placeholder {
     color: #888;
     opacity: 1;
@@ -198,16 +146,15 @@ a {
 
 		<section class="_sidebar" tabindex="-1">
 		<style type="text/css">
+
 	.list_item {
 		width: 290px;
 		
 		/*margin-top: 70px;*/
-		margin-left: 30px;
-		padding-top: 5px;
-		height: 30px;
+		margin-left: 20px;
+		padding-top: 10px;
+		height: 10px;
 
-		
-		
 		text-align: center;
 		display: block;
 		/*border: 1px solid gray;*/
@@ -219,32 +166,38 @@ a {
 	background-color: #398DF0;
 /*	background-color: #000000;*/
 }
-.list-item{
-    content: '';
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    background-image: url(Icons/MathIcon.jpg);
-    background-size: 10rem 12rem;
+
+.center {
+	padding-top: 10px;
+	padding-right: 20px;
+    /*text-align: center;*/
+   
 }
 
-.fa
+.MathTitle
+{
+
+	color: black;
+
+	/*padding-right: 120px;*/
+	text-decoration: none;
+}
+/*here you can change the padding of the list ,ok */
+.list_item1 > span
 {
 	float: right;
+	padding-right: 60px;
+
 }
+
 
 
 </style>
-
-
-					<div id="wrap" dir="rtl">
-					    <a class="list_item" href="#thisIsPageA">
-
-					    <i class="fa fa-arrow-left"> </i>
-					    الرياضيات
-					    </a>
-
-					    <a class="list_item" href="#thisIsPageb">b</a>
+					<div class="center">
+					<a class="MathTitle" href="#mathTableOfcontent">الرياضيات</a>
+					</div>
+					<div id="wrap" class="wrap" dir="rtl">
+					    <a class="list_item list_item1" href="#thisIsPageb" ><span>الدرس الأول</span></a>
 					    <a class="list_item" href="#thisIsPageC">c</a>
 					    <a class="list_item" href="#thisIspageD">d</a>
 					    <a class="list_item" href="#thisIsPageE">e</a>
@@ -260,10 +213,25 @@ a {
 					</div>	
 		</section>
 
-
+<style type="text/css">
+	.relative {
+    color: #ccc;
+    cursor: default;
+    opacity:0.5;
+    padding-right: 50%;
+    padding-top: 05%;
+    letter-spacing: -.125rem;
+    font: normal 4rem/1.7 "Open Sans", Helvetica, Arial, sans-serif;
+ 
+}
+h1 p {
+	font-style: normal;
+     font-weight: 500;
+}
+</style>
 
 		<div class="relative">
-		<h1>Stu.Dy</h1>
+		<h1><p>Stu.Dy</p></h1>
 		</div>
 
 
@@ -272,11 +240,13 @@ a {
 		//to add something in the body just see what id Get clicked then Add the content in JavaScript with InnetHtml Command
 		?>
 
-		<div id="whatEverId">hello one<div>
 
-
-
-
+<?php 
+//  TODO:
+//icon's to the link 
+//  
+//  
+?>
 
 
 		</body>

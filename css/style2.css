@@ -5,7 +5,7 @@
 ._nav {
             float: left;
             margin-right: .4rem;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             color: #333;
             -webkit-transform:scale(1,1.1); /* Safari and Chrome */
             -moz-transform:scale(1,1.1); /* Firefox */
@@ -19,7 +19,7 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 5rem;
+            height: 3rem;
             line-height: 3rem;
             background: #f0f0f0;
             border-bottom: 1px solid #d9d9d9;
@@ -30,6 +30,8 @@
             -ms-user-select: none;
             user-select: none;
         }
+
+
 
 
 
@@ -85,47 +87,6 @@
         }
 
 
-        #search {
-            /*padding-left: 10px;*/
-            padding-top: 10px;
-            padding-right: 50px;
-
-        }
-
-        #search input[type="text"] {
-            background: url(Icons/searchicon.png) no-repeat 2px 0.5px #fcfcfc;
-            border: 1px solid #d1d1d1;
-            font: 16 1em/1.7 "Open Sans", Helvetica, Arial, sans-serif;
-            color:#666666;
-            float: right;
-
-            width: 150px;
-            padding: -3px 15px 6px 35px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
-            -webkit-appearance: none;
-            -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
-            -webkit-transition: all 0.7s ease 0s;
-            -moz-transition: all 0.7s ease 0s;
-            -o-transition: all 0.7s ease 0s;
-            transition: all 0.7s ease 0s;
-            }
-
-        #search input[type="text"]:focus {
-            width: 200px;
-            border: 3px solid #e6f2ff;
-            outline: none;
-            padding-right: 10px;
-
-            }
-
-            #search ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            padding-right:10px; 
-                    }
 
 body {
     background-color: #FFFFFF;
@@ -137,83 +98,6 @@ body {
 }
 
 
-/********************/
-/* GENERAL SETTINGS */
-/********************/
-body {
-    background-color: #FFFFFF;
-    font-size: 16px;
-}
-
-#menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.clear {
-    clear: both;
-}
 
 
-/********************/
-/* EXPANDABLE LIST  */
-/********************/
-#listContainer{
-  margin-top:15px;
-}
 
-#expList ul, li {
-    /*list-style: none;*/
-    margin:0;
-    padding:0;
-    cursor: pointer;
-}
-#expList p {
-    margin:0;
-    display:block;
-}
-#expList p:hover {
-    background-color:#121212;
-}
-#expList li {
-    line-height:140%;
-    text-indent:0px;
-    background-position: 1px 8px;
-    padding-right: 20px;
-    background-repeat: no-repeat;
-}
-
-/* Collapsed state for list element */
-#expList .collapsed {
-    
-     list-style-image: url('../Icons/left.png');
-
-}
-/* Expanded state for list element
-/* NOTE: This class must be located UNDER the collapsed one */
-#expList .expanded {
-    
-    list-style-image: url('../Icons/blackleft.png');
-}
-#expList {
-    clear: both;
-}
-
-.listControl{
-  margin-bottom: 15px;
-}
-.listControl a {
-    border: 1px solid #555555;
-    color: #555555;
-    cursor: pointer;
-    height: 1.5em;
-    line-height: 1.5em;
-    margin-right: 5px;
-    padding: 4px 10px;
-}
-.listControl a:hover {
-    background-color:#555555;
-    color:#222222; 
-    font-weight:normal;
-}
