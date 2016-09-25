@@ -163,7 +163,10 @@ color:#6D6D6D;
 
 }*/
 
-
+details >summary
+{
+	border-right: 200px;
+}
 summary:focus {
 	outline-style: none;
 }
@@ -181,16 +184,22 @@ details > p {
 	margin-left: 24px;
 }
 details details {
-	margin-left: 36px;
+	margin-left: 50px;
 }
+
 details details summary {
 	font-size: 16px;
 	display: block;
 }
+summary
+{
+	padding-right: 0px;
+}
+
 .DetailContainer
 {
 	line-height: 150%;
-	padding-right: 13px;
+	padding-right: 0px;
 }
 .DetailsOne
 {
@@ -200,19 +209,41 @@ span{
 	padding-right: 5px;
 }
 
+
 	</style>
 
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		
+    $('summary').click(function () {
+    		$('summary').each(function() {
+    					$(this).css('background', '');
+									});
+        if(this.style.background == "") {
+            $(this).css('background', '#398DF0');
+        }
+        else {
+            $(this).css('background', '');
+        }
+    });
+});
+
+</script>
 	<script type="text/javascript">
 
-	 	$(document).click(function(event) {
-    	var text = $(event.target).text();
+// 	$(document).click(function(event) {
+//    	var text = $(event.target).text();
 
-    	if (event.target.id=="GetClicked"){
-    		var myElement = document.querySelector("#GetClicked");
-			myElement.style.backgroundColor = "#398DF0";
-   					 }
-				});
+//    	if (event.target.id=="GetClicked"){
+//    		var myElement = document.querySelector("#GetClicked");
+//			myElement.style.backgroundColor = "#398DF0";
+  // 					 }
+	//			});
+	//			*/
+
 	</script>
+
 
 					<section class="_sidebar" tabindex="-1">
 					<article>
