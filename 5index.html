@@ -8,6 +8,7 @@
 		
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
+		<script src="js\jquery-3.1.0.min.js"></script>
 		</head>	
 
 		<body>
@@ -15,6 +16,7 @@
 			._nav a {
 				padding-top: 5px;
 				}
+
 		</style>	
 		<header class="_header">
 		<nav class="_nav" rol="navigation">
@@ -22,7 +24,9 @@
 		
 		  <a href="#" class="_nav-link _nav-current">Offline</a> 
 		  <a href="#" class="_nav-link _nav-current">About</a> 
-		  <a href="#" class="_nav-link _nav-current">News</a>
+		  <a href="#" class="_nav-link _nav-current">
+<i class="fa fa-sign-in" aria-hidden="true">Sign In</i>
+		  </a>
 		  <a href="#" class="_nav-link _nav-current">Tips</a>
 		</nav>
 		<style>
@@ -109,7 +113,7 @@ a.wrap{
 
 		._sidebar::-webkit-scrollbar {
 		    -webkit-appearance: none;
-		    background-color: rgb(255, 255, 255);
+		    background-color: #F9F9F9;
 		    width: 10px;
 		}
 		._sidebar::-webkit-scrollbar-button {
@@ -138,80 +142,124 @@ a.wrap{
 		    border-bottom-left-radius: 5px;
 		}
 		
-			
 
 		/*this is the list code for now one , don't mix it with the section code , please for fuck sake*/
 			</style>
-		
+			<style type="text/css">
 
-		<section class="_sidebar" tabindex="-1">
-		<style type="text/css">
+				 summary::-webkit-details-marker {
+ 				color: #B6B6B6;
+			 	font-size: 20px;
+ 				margin-right: 2px;
+			}
+			details:hover summary::-webkit-details-marker:hover {
+ 			color:#858585;
+ 			background:0;
+			 }
 
-	.list_item {
-		width: 290px;
-		
-		/*margin-top: 70px;*/
-		margin-left: 20px;
-		padding-top: 10px;
-		height: 10px;
-
-		text-align: center;
-		display: block;
-		/*border: 1px solid gray;*/
-		   
-}
-
-#wrap :hover
+/*summary::-webkit-details-marker:hover
 {
-	background-color: #398DF0;
-/*	background-color: #000000;*/
+color:#6D6D6D;
+
+}*/
+
+
+summary:focus {
+	outline-style: none;
 }
 
-.center {
-	padding-top: 10px;
-	padding-right: 20px;
-    /*text-align: center;*/
-   
-}
-
-.MathTitle
+summary
 {
-
-	color: black;
-
-	/*padding-right: 120px;*/
-	text-decoration: none;
+	cursor: pointer;
 }
-/*here you can change the padding of the list ,ok */
-.list_item1 > span
+article > details > summary {
+	font-size: 16px;
+	margin-top: 0px;
+}
+
+details > p {
+	margin-left: 24px;
+}
+details details {
+	margin-left: 36px;
+}
+details details summary {
+	font-size: 16px;
+	display: block;
+}
+.DetailContainer
 {
-	float: right;
-	padding-right: 60px;
-
+	line-height: 150%;
+	padding-right: 13px;
+}
+.DetailsOne
+{
+	padding-right: 13px;
+}
+span{
+	padding-right: 5px;
 }
 
+	</style>
 
+	<script type="text/javascript">
 
-</style>
-					<div class="center">
-					<a class="MathTitle" href="#mathTableOfcontent">الرياضيات</a>
-					</div>
-					<div id="wrap" class="wrap" dir="rtl">
-					    <a class="list_item list_item1" href="#thisIsPageb" ><span>الدرس الأول</span></a>
-					    <a class="list_item" href="#thisIsPageC">c</a>
-					    <a class="list_item" href="#thisIspageD">d</a>
-					    <a class="list_item" href="#thisIsPageE">e</a>
-					    <a class="list_item" href="#thisIsPageF">f</a>
-					    <a class="list_item" href="#thisIsPageG">g</a>
-					    <a class="list_item" href="#thisIsPageH">h</a>
-					    <a class="list_item" href="#thisIsPageI">i</a>
-					    <a class="list_item" href="#thisIsPageE">j</a>
-					    <a class="list_item" href="#thisIsPageF">k</a>
-					    <a class="list_item" href="#thisIsPageG">l</a>
-					    <a class="list_item" href="#thisIsPageH">m</a>
-					    <a class="list_item" href="#thisIsPageI">n</a>
-					</div>	
+	 	$(document).click(function(event) {
+    	var text = $(event.target).text();
+
+    	if (event.target.id=="GetClicked"){
+    		var myElement = document.querySelector("#GetClicked");
+			myElement.style.backgroundColor = "#398DF0";
+   					 }
+				});
+	</script>
+
+					<section class="_sidebar" tabindex="-1">
+					<article>
+
+        	<details class="DetailContainer">
+        	<summary class="summaryClass">
+               		
+           <span>Step by Step Guides</span>    		
+           		</summary>
+
+          <details class="DetailsOne">
+            <summary><span>Getting Started</span></summary>
+            <p>1. Signup for a free trial</p>
+          </details >
+
+          <details class="DetailsOne">
+            <summary><span>Setting up a backup schedule</span></summary>
+            <p>This step assumes you have already signed up and installed the software</p>
+          </details>
+
+        </details>
+
+        <details class="DetailContainer">
+          <summary><span>Installation/Upgrade Issues</span></summary>
+          <p class="DetailsOne">After setup the program doesn't start</p>
+        </details>
+      </article>
+      
+      <article>
+        <details class="DetailContainer">
+          <summary><span>SERVER Step by Step Guides</span></summary>
+          <details class="DetailsOne">
+            <summary><span>Getting Started</span></summary>
+            <p class="DetailsOne">1. Signup for a free trial</p>
+          </details>
+          <details class="DetailsOne">
+            <summary><span>Setting up a backup schedule</span></summary>
+            <p>This step assumes you have already signed up and installed the software</p>
+          </details>
+        </details>
+        <details class="DetailContainer">
+          <summary><span>Installation/Upgrade Issues</span></summary>
+          <p>After setup the program doesn't start</p>
+        </details>
+      </article> 
 		</section>
+
 
 <style type="text/css">
 	.relative {
